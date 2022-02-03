@@ -1,10 +1,3 @@
-//
-// Created by 이선열 on 2022/02/03.
-//
-
-#ifndef INC_100JUN_RECURSION_2448_H
-#define INC_100JUN_RECURSION_2448_H
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -69,7 +62,7 @@ char** makeBoard(int num) {
     return board;
 }
 
-int __main() {
+int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
 
@@ -80,11 +73,11 @@ int __main() {
     fillStars(num, board);
     printBoard(num, board);
 
+    for(int i = 0; i < num; ++i) { delete [] board[i]; }
+    delete [] board;
+
+    cout << "Test";
+
     return 0;
 }
 
-
-
-
-
-#endif //INC_100JUN_RECURSION_2448_H
